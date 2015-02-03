@@ -11,62 +11,67 @@ body {
 
 	background-color: #FFF9D3;
 	background-size: 10px 10px;
+	color: #5F4936;
+	font-size: 16px;
+	font-family: 'Arvo', serif;
 }
 
-body * {
+* {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 
-	color: #5F4936;
-	font-family: 'Arvo', serif;
+	color: inherit;
+	font: inherit;
+	margin: 0;
+	padding: 0;
+	text-decoration: inherit;
 }
 
 p {
 	line-height: 1.5em;
 	margin-bottom: 0.5em;
-	text-align: justify;
+}
+
+ul {
+	list-style: none;
 }
 
 .container {
 	max-width: 1200px;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 	position: relative;
 }
 
 .menu, .footer {
 	background-color: #5F4936;
-	border-bottom: 0.4em solid #91B8A5;
-	border-top: 0.4em solid #91B8A5;
+	border-bottom: 5px solid #91B8A5;
+	border-top: 5px solid #91B8A5;
 }
 
 .menu {
-	margin: 3em 0 2.5em;
+	font-size: 2rem;
+	margin: .5em 0 1em;
 }
 
-.menu-item {
-	display: inline-block;
-	margin: 0.5em 0;
-}
-
-.menu-item:not(:last-child) {
-	margin-right: 2.5em;
-}
-
-.menu-item a {
+.menu .section {
 	color: #979899;
+	display: inline-block;
 	font-family: 'Schoolbell', cursive;
-	font-size: 2.5em;
+	margin-left: 0.5em;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
 	text-decoration: none;
+	text-transform: capitalize;
 }
 
-.menu-item.active a, .menu-item:hover a, .contact-item, .contact-item a {
+.menu .section:first-child {
+	margin-left: 0;
+}
+
+.menu .section.active, .menu .section:hover, .contacts {
 	color: #C1D4E7;
-}
-
-.menu-item:active a {
-	position: relative;
-	top: 1px;
 }
 
 .section {
@@ -93,16 +98,17 @@ p {
 	margin-bottom: 2em;
 }
 
-.description h4 {
-	font-size: 1.5em;
+.me {
+	font-size: 1.75rem;
 	font-style: italic;
 	margin-bottom: 0.5em;
 	text-transform: uppercase;
 }
 
-.description span {
+.graduations {
 	display: block;
-	margin-bottom: 0.5em;
+	font-size: 1.25rem;
+	margin-bottom: 1em;
 }
 
 .footer {
@@ -110,35 +116,8 @@ p {
 	padding: 2em 0;
 }
 
-.contact-item {
-	display: inline-block;
-	width: 49%;
+.contacts {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
-
-.contact-item a {
-	text-decoration: none;
-}
-
-.email, .twitter {
-	margin-bottom: 0.75em;
-}
-
-.twitter, .github {
-	text-align: right;
-}
-
-.project a {
-	text-decoration: none;
-}
-
-#research, #work, .footer {
-	clear: left;
-}
-
-@media only screen and (min-width: 1040px) {
-	#research, #publication, #work, #projects {
-		float: left;
-		width: 50%;
-	}
-}
-
